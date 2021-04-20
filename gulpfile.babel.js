@@ -121,7 +121,7 @@ function html() {
   return multipipe(
     src(`${paths.src.html}/*.html`),
     fileInclude(),
-    webpHTML(),
+    /*webpHTML(),*/
     dest(`${srcFolder}`),
 /*    htmlValidator(),
     bemValidator(),*/

@@ -15,11 +15,13 @@
     <!-- build:css -->
     <!-- CriticalCSS <style></style>-->
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- endbuild -->
     <!-- Fonts -->
     <!-- build:fonts -->
-    <link
+<!--     <link
         rel="preload"
         href="fonts/PTSansNarrow-Bold.woff2"
         as="font"
@@ -32,7 +34,7 @@
         as="font"
         type="font/woff2"
         crossorigin
-    />
+    /> -->
     <!-- endbuild -->
     <!-- Favicon -->
     <link rel="icon" href="favicon.ico" />
@@ -79,15 +81,15 @@
             <header class="header">
   <div class="container container--narrow header__container">
     <a class="logo" href="#">
-        <picture><source srcset="img/logo.svg" type="image/webp"><img src="img/logo.svg" alt="Logotype Odigo"></picture>
+        <img src="img/logo.svg" alt="Logotype Odigo">
     </a>
 
     <nav class="nav">
         <ul class="nav__list">
-            <li><a href="#articles">Articles</a></li>
-            <li><a href="#locations">Locations</a></li>
-            <li><a href="#videos">Videos</a></li>
-            <li><a href="#sign-in">Sign In</a></li>
+            <li class="nav__item"><a href="#articles">Articles</a></li>
+            <li class="nav__item"><a href="#locations">Locations</a></li>
+            <li class="nav__item"><a href="#videos">Videos</a></li>
+            <li class="nav__item"><a href="#sign-in">Sign In</a></li>
         </ul>
     </nav>
   </div>

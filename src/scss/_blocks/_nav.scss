@@ -2,7 +2,22 @@
     &__list {
         @include no-list;
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-end;
+    }
+
+    &__item {
+        font-size: 18px;
+
+        &:not(:last-child) {
+            margin-right: 42px;
+        }
+
+        a {
+            display: block;
+            padding: 10px 20px;
+            color: currentColor;
+            text-decoration: none;
+        }
     }
 
 }
