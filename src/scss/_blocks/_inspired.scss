@@ -1,0 +1,57 @@
+.inspired {
+    &__header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__list {
+        @include no-list;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__item {
+        position: relative;
+        margin-bottom: 5px;
+
+        width: 33%;
+        overflow: hidden;
+
+        &:nth-child(1),
+        &:nth-child(2) {
+            width: 49%;
+
+            .inspired__img {
+                min-height: 354px;
+            }
+        }
+    }
+
+    &__img {
+        margin: 0;
+        max-width: 100%;
+        min-height: 283px;
+
+        img {
+            object-fit: cover;
+           /* max-width: 100%;
+            height: auto;*/
+
+        }
+    }
+
+    &__subtitle {
+        position: absolute;
+        bottom: 27px;
+        left: 29px;
+        font-size: 50px;
+        line-height: 60px;
+        color: #fff;
+    }
+
+    &__link {
+        display: block;
+        margin: 20px 0;
+    }
+}

@@ -1,12 +1,23 @@
 .title {
-  font-size: 35px;
-  line-height: 42px;
-  color: #102746;
-  margin: 20px 0;
+    font-size: 35px;
+    line-height: 42px;
+    color: #102746;
+    margin: 20px 0;
+
+    &::after {
+        content: "";
+        display: block;
+        max-width: 253px;
+        height: 3px;
+        background: #006DFE;
+        margin-top: 10px;
+    }
+
 }
 
 .link {
     color: #006DFE;
     text-decoration: none;
     text-transform: uppercase;
+
 }
