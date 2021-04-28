@@ -1,14 +1,57 @@
 .header {
     color: #fff;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+    z-index: 10;
+    transition: background-color 0.2s ease-in;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 10;
+    }
+
+    &--active {
+        &::before {
+            background-color: #000;
+        }
+    }
+
+    &--scroll {
+        background-color: rgba(#151824, 0.9);
+
+        .header__container {
+            padding-top: 16px;
+            padding-bottom: 16px;
+        }
+    }
 
     &__container {
         display: flex;
         justify-content: space-between;
         padding-top: 56px;
         padding-bottom: 56px;
+        transition: padding-top 0.2s ease-in,
+                    padding-bottom 0.2s ease-in;
+
+        @media (max-width: $tablet) {
+            padding-top: 16px;
+            padding-bottom: 16px;
+        }
+    }
+
+    &__logo {
+        position: relative;
+        z-index: 10;
+    }
+
+    &__btn-nav {
+        z-index: 10;
     }
 }
