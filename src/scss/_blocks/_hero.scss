@@ -18,14 +18,45 @@
 
     &__text {
         max-width: 550px;
+        margin-bottom: 59px;
     }
 
     &__form {
         display: flex;
         align-items: flex-end;
+
+        @media (max-width: $tablet) {
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: $phone-max) {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     &__group {
-        margin-right: 40px;
+        max-width: 297px;
+        width: 33.5%;
+        margin-right: 7%;
+        margin-bottom: 40px;
+
+        @media (max-width: $tablet) {
+            width: 43%;
+        }
+
+        @media (max-width: $phone-max) {
+            margin-right: 0;
+            width: 100%;
+        }
+    }
+
+    &__btn {
+        margin-bottom: 40px;
+
+        @media (max-width: $phone-max) {
+            margin-right: 0;
+            width: 297px;
+        }
     }
 }
