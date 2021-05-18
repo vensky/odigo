@@ -46,6 +46,10 @@
             padding: 10px 20px;
             color: currentColor;
             text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
 }
