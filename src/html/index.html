@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" prefix="og:http://ogp.me/ns#">
-    @@include('common/head.html')
+    @@include('_commons/_head.html')
 
     <body class="js-body">
-        @@include('common/svg-sprite.html')
-        @@include('common/header.html')
+        @@include('_commons/_svg-sprite.html')
+        @@include('_commons/_header.html')
         <main>
             <section class="hero">
                 <div class="container container--narrow">
@@ -110,8 +110,9 @@
 
                 </div>
             </section>
+            @@include('_sections/_video.html')
         </main>
-        @@include('common/footer.html')
+        @@include('_commons/_footer.html')
 
         <!-- build:js -->
         <script src="js/scripts.js"></script>

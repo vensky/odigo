@@ -207,9 +207,10 @@ function clean() {
 }
 
 function startWatch() {
-  watch(paths.watch.html).on("change", browserSync.reload);
+  watch(paths.watch.html, html).on("change", browserSync.reload);
+  watch(paths.watch.scss, html);
   watch(paths.watch.scss, styles);
-  watch(paths.watch.html, html);
+  /*watch(paths.watch.html, html);*/
   watch([paths.watch.js, `!${paths.src.js}scripts.js`], scripts);
   watch(paths.watch.img, images);
 }
