@@ -9,48 +9,89 @@
 }
 
 .place {
-    max-width: 392px;
-
+    max-width: 32%;
     margin-bottom: 58px;
 
-    &__img {
+    @media (max-width: $pad) {
+        max-width: 48%;
+    }
+
+    @media (max-width: $tablet) {
+        max-width: 100%;
+    }
+
+    &__tile {
         display: flex;
         flex-direction: column;
-        height: 377px;
+        min-height: 377px;
         overflow: hidden;
         position: relative;
+    }
 
-        img {
-            object-fit: cover;
-            position: absolute;
-            top: 0;
-            left: 0;
-
-            width: 100%;
-        }
+    &__img {
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
     }
 
     &__header {
         background-color: rgba(#151824, 0.6);
-        background-color: red;
         color: #fff;
         display: flex;
-        justify-content: flex-end;
+        flex-wrap: wrap;
+        justify-content: space-between;
         margin-top: auto;
         padding: 15px 25px;
         position: relative;
+        line-height: 24px;
 
     }
 
     &__title {
+        font-size: 18px;
         margin-top: 0;
         margin-bottom: 0;
         margin-right: auto;
         text-transform: uppercase;
+        max-width: 60%;
     }
 
     &__text {
         font-weight: 400;
         margin-bottom: 31px;
+    }
+
+    &__socials {
+        display: flex;
+    }
+
+    &__likes {
+        white-space: nowrap;
+        margin-right: 14px;
+
+        > span {
+            margin-right: 4px;
+        }
+
+        > img {
+            position: relative;
+            top: 2px;
+        }
+    }
+
+    &__comments {
+        white-space: nowrap;
+
+        > span {
+            margin-right: 9px;
+        }
+
+        > img {
+            position: relative;
+            top: 2px;
+        }
     }
 }
