@@ -4,6 +4,11 @@
     color: #102746;
     margin: 20px 0;
 
+    @media (max-width: $tablet) {
+        font-size: 28px;
+        line-height: 32px;
+    }
+
     &::after {
         content: "";
         display: block;
@@ -11,6 +16,10 @@
         height: 3px;
         background: #006DFE;
         margin-top: 10px;
+
+        @media (max-width: $tablet) {
+            width: 30%;
+        }
     }
 
 }
@@ -19,5 +28,11 @@
     color: #006DFE;
     text-decoration: none;
     text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    margin-top: auto;
 
+    svg {
+        margin-left: 20px;
+    }
 }

@@ -1,9 +1,11 @@
 .inspired {
-
-
     &__header {
         display: flex;
         justify-content: space-between;
+
+        @media (max-width: $tablet) {
+            flex-direction: column;
+        }
     }
 
     &__list {
@@ -11,18 +13,30 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+
+        @media (max-width: $tablet) {
+            flex-direction: column;
+        }
     }
 
     &__item {
         position: relative;
-        margin-bottom: 5px;
+        margin-bottom: 15px;
 
         width: 33%;
         overflow: hidden;
 
+        @media (max-width: $tablet) {
+            width: 100%;
+        }
+
         &:nth-child(1),
         &:nth-child(2) {
             width: 49%;
+
+        @media (max-width: $tablet) {
+            width: 100%;
+        }
 
             .inspired__img {
                 min-height: 354px;
@@ -33,12 +47,12 @@
     &__img {
         margin: 0;
         max-width: 100%;
-        min-height: 283px;
+        height: 283px;
 
         img {
             object-fit: cover;
-           /* max-width: 100%;
-            height: auto;*/
+            width: 100%;
+            height: 100%;
 
         }
     }
@@ -50,6 +64,10 @@
         font-size: 50px;
         line-height: 60px;
         color: #fff;
+
+        @media (max-width: $tablet) {
+
+        }
     }
 
     &__link {
