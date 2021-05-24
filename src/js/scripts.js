@@ -4,6 +4,7 @@ const $body = document.querySelector('.js-body');
 const $header = document.querySelector('.js-header');
 const $btnNav = document.querySelector('.js-btnNav');
 const $nav = document.querySelector('.js-nav');
+const $formItems = document.querySelectorAll('.js-formItem');
 const $accordeon = document.querySelector('.js-accordion');
 
 
@@ -18,12 +19,18 @@ $btnNav.addEventListener('click', () => {
     $body.classList.toggle('no-scroll');
 });
 
+for (let $item of $formItems) {
+    $item.addEventListener('click', () => {
+        $item.querySelector('.form__label').classList.add('form__label--active');
+    });
+}
+
 $accordeon.addEventListener('click', (e) => {
     e.target.nextElementSibling.classList.toggle('show');
     console.log(e.target.nextElementSibling)
 });
 
-const setupVideo = (video) => {
+const setupVideo = () => {
     let $video = document.querySelector('.video');
     let $link = $video.querySelector('.video__link');
     let $media = $video.querySelector('.video__media');
